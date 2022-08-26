@@ -1,0 +1,150 @@
+:root {
+    --bg-color: #F6F6F6;
+    --green: #42940F;
+    --dark-green: #1F5200;
+    --light-gray: #4E4E4E;
+    --dark-gray: #2F2F2F;
+    --rose: #FDCFF3;
+    --gold: #FFCF56;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+    background-color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1180px;
+    justify-content: center;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 482px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+    position: relative;
+    color: var(--dark-gray);
+    background-color: var(--white);
+    margin: 10px 0;
+}
+
+.card__labels {
+    position: absolute;
+    display: flex;
+    gap: 16px;
+    margin: 16px;
+}
+
+.card__label {
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 8px;
+    
+}
+
+.card__label--new {
+    background-color: var(--rose);
+}
+
+.card__label--last {
+    background-color: var(--gold);
+}
+
+.card__image {
+    border-radius: 12px 12px 0 0;
+    flex: 0 215px;
+}
+
+.card__description {
+    padding: 0 24px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 auto;
+}
+
+.card__title {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 36px;
+    margin: 24px 0 16px;
+}
+
+.card__text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.card__button {
+    font-size: 18px;
+    font-weight: 900;
+    width: 100%;
+    height: 48px;
+    align-content: center;
+    border-radius: 8px;
+    margin-top: auto;
+}
+
+.card__button--default {
+    border: 2px solid var(--green);
+    background-color: var(--white);
+    color: var(--green);
+}
+
+.card__button--disabled {
+    border: 1px solid var(--light-gray);
+    background: var(--light-gray);
+    color: var(--white);
+}
+
+.card__button--default:hover {
+    background: var(--green);
+    color: var(--white);
+    border: 2px solid var(--green);
+}
+
+.card__button--default:active {
+    background: var(--dark-green);
+    color: var(--white);
+    border: 2px solid var(--dark-green);
+}
+
+@media (max-width: 1250px) {
+    .products{
+        margin:0 12vw;
+    }
+}
+
+@media (max-width: 1030px) {
+    .products{
+       justify-content: center;
+    }
+}
